@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cas",
+  "info": {
+    "singularName": "ca",
+    "pluralName": "cas",
+    "displayName": "Category"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}
