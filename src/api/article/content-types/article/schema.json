@@ -43,8 +43,8 @@
       "required": true
     },
     "publishedAt": {
-      "type": "datetime",
-      "required": false
+      "type": "date",
+      "required": true
     }
   }
 }
