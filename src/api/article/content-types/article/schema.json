@@ -41,6 +41,10 @@
     "image_url": {
       "type": "string",
       "required": true
+    },
+    "publishedAt": {
+      "type": "datetime",
+      "required": false
     }
   }
 }
