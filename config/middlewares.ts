@@ -6,7 +6,7 @@ export default [
     config: {
       enabled: true,
       origin: [
-        'https://lustrous-paprenjak-255715.netlify.app'
+        'https://www.luchronicles.com'
       ],
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
       credentials: true
