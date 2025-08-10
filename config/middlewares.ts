@@ -6,8 +6,7 @@ export default [
     config: {
       enabled: true,
       origin: [
-        'https://luchronicles.com'
-        
+        'https://luchronicles.com' , 'http://127.0.0.1:5500'
       ],
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
       credentials: true
