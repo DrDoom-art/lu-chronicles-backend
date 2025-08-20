@@ -17,19 +17,19 @@
     },
     "slug": {
       "type": "uid",
-      "targetField": "title",
       "required": true
     },
     "excerpt": {
-      "type": "text",
-      "required": false
-    },
-    "category": {
-      "type": "string",
-      "required": true
+      "type": "text"
     },
     "content": {
-      "type": "blocks",
+      "type": "customField",
+      "customField": "plugin::ckeditor.CKEditor",
+      "options": {
+        "output": "HTML",
+        "preset": "rich",
+        "licenseKey": "eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NTY4NTc1OTksImp0aSI6ImVjZWNhZjVmLTI2ZGEtNGI4NC1hODI3LTU1NWFjN2YwM2U2ZSIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiLCJzaCJdLCJ3aGl0ZUxhYmVsIjp0cnVlLCJsaWNlbnNlVHlwZSI6InRyaWFsIiwiZmVhdHVyZXMiOlsiKiJdLCJ2YyI6IjA3OGI4NjllIn0.ioMp6tJ1kKgvFKlPcpaM3HXb2y1UNY-rNZZU7qZaKXXxActapOiIA_ytsClPRtwm3Tz_layiaVn9UhUlKHKfcA"
+      },
       "required": true
     },
     "authors": {
@@ -38,13 +38,19 @@
       "target": "api::author.author",
       "inversedBy": "articles"
     },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "articles"
+    },
     "image_url": {
       "type": "string",
       "required": true
     },
-    "publishedAt": {
-      "type": "date",
-      "required": true
+    "isFeatured": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
